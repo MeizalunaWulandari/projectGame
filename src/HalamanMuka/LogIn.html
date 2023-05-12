@@ -37,17 +37,35 @@
     <section class="w-screen h-screen flex flex-col justify-center items-center">
       <div class="h-[810px] w-[420px] bg-green-500 flex flex-col justify-center items-center gap-4 rounded-lg relative">
         <!-- start -->
-        <!-- hamburger menu -->
-        <div class="">
-          <div class="absolute top-8 left-6 z-20 text-7xl">
+        <div
+          x-data="{isOpern: false}"
+          class="w-full">
+          <div class="absolute top-8 left-6 text-7xl">
+            <!-- hamburger menu -->
             <img
               src="../img/more.png"
               alt=""
+              x-on:click="isOpen = !isOpen"
               class="w-8 h-8" />
+            <!-- nav hamburger -->
+            <div class="w-32 h-60 -top-8 -left-6 absolute bg-slate-50 z-50 flex justify-center items-center flex-col">
+              <img
+                src="../img/settings.png"
+                alt=""
+                class="h-14 w-14 m-3" />
+              <img
+                src="../img/info.png"
+                alt=""
+                class="h-14 w-14 m-3" />
+              <img
+                src="../img/logout.png"
+                alt=""
+                class="h-14 w-14 m-3" />
+            </div>
           </div>
         </div>
         <!-- input -->
-        <div class="">
+        <div class="flex flex-col justify-center items-center">
           <div class="flex flex-col justify-center items-center w-72">
             <div
               class="text-5xl font-extrabold font-utama text-white"
