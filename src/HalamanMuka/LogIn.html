@@ -44,6 +44,7 @@
             <!-- hamburger menu -->
             <button
               x-on:click="isOpen = !isOpen"
+              @click.outside="isOpen = false"
               class="">
               <img
                 src="../img/more.png"
@@ -74,28 +75,30 @@
         <!-- input -->
         <div class="flex flex-col justify-center items-center">
           <div class="flex flex-col justify-center items-center w-72">
-            <div
+            <label
+              for="nama"
               class="text-5xl font-extrabold font-utama text-white"
               style="-webkit-text-stroke: 1px black">
               Masukkan Nama
-            </div>
-            <div class="my-5">
-              <input
-                type="text"
-                class="w-52 h-12 font-bold text-2xl tracking-[0.1em] rounded-xl opacity-50 outline-none px-4" />
-            </div>
+            </label>
+            <input
+              id="nama"
+              name="nama"
+              type="text"
+              class="w-52 h-12 my-5 font-bold text-2xl tracking-[0.1em] rounded-xl opacity-50 outline-none px-4" />
           </div>
           <div class="flex flex-col justify-center items-center w-56">
-            <div
+            <label
+              for="jenis"
               class="text-5xl font-extrabold font-utama text-white"
               style="-webkit-text-stroke: 1px black">
               Jenis Kelamin
-            </div>
-            <div class="my-5">
-              <input
-                type="text"
-                class="w-52 h-12 font-bold text-2xl tracking-[0.1em] rounded-xl opacity-50 outline-none px-4" />
-            </div>
+            </label>
+            <input
+              type="text"
+              name="jenis"
+              id="jenis"
+              class="w-52 h-12 font-bold text-2xl tracking-[0.1em] rounded-xl opacity-50 outline-none px-4 my-5" />
           </div>
         </div>
         <!-- button -->
