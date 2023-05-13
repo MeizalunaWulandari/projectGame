@@ -573,6 +573,18 @@ html {
   margin-bottom: 1.25rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.mb-28 {
+  margin-bottom: 7rem;
+}
+
 .flex {
   display: flex;
 }
@@ -611,6 +623,14 @@ html {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .w-14 {
@@ -657,6 +677,22 @@ html {
   width: 100vw;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -681,6 +717,10 @@ html {
   gap: 1.75rem;
 }
 
+.gap-14 {
+  gap: 3.5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -691,6 +731,10 @@ html {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .bg-green-500 {
@@ -760,6 +804,10 @@ html {
 
 .font-light {
   font-weight: 300;
+}
+
+.leading-none {
+  line-height: 1;
 }
 
 .tracking-\[0\.1em\] {
