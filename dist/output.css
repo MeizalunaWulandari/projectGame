@@ -583,6 +583,30 @@ html {
   top: -2rem;
 }
 
+.top-6 {
+  top: 1.5rem;
+}
+
+.-top-6 {
+  top: -1.5rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
+.-right-6 {
+  right: -1.5rem;
+}
+
+.-top-4 {
+  top: -1rem;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -814,6 +838,11 @@ html {
   padding: 1.25rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .font-utama {
   font-family: Chicle;
 }
@@ -833,12 +862,57 @@ html {
   line-height: 1;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-extrabold {
   font-weight: 800;
 }
 
 .font-light {
   font-weight: 300;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.tracking-\[1em\] {
+  letter-spacing: 1em;
+}
+
+.tracking-\[\.25em\] {
+  letter-spacing: .25em;
+}
+
+.tracking-\[\.15em\] {
+  letter-spacing: .15em;
+}
+
+.tracking-\[\.1em\] {
+  letter-spacing: .1em;
+}
+
+.tracking-\[0\.1em\] {
+  letter-spacing: 0.1em;
 }
 
 .text-white {
@@ -860,4 +934,9 @@ html {
 
 .opacity-80 {
   opacity: 0.8;
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }

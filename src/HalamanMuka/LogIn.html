@@ -37,18 +37,25 @@
     <section class="w-screen h-screen flex flex-col justify-center items-center">
       <div class="h-[810px] w-[420px] bg-green-500 flex flex-col justify-center items-center gap-4 rounded-lg relative">
         <!-- start -->
-        <div
-          x-data="{isOpern: false}"
-          class="w-full">
-          <div class="absolute top-8 left-6 text-7xl">
+        <div class="w-full">
+          <div
+            x-data="{isOpen: false}"
+            class="absolute top-4 right-6 text-7xl">
             <!-- hamburger menu -->
-            <img
-              src="../img/more.png"
-              alt=""
+            <button
               x-on:click="isOpen = !isOpen"
-              class="w-8 h-8" />
+              class="">
+              <img
+                src="../img/more.png"
+                alt="hamburgermenu"
+                class="w-8 h-8" />
+            </button>
             <!-- nav hamburger -->
-            <div class="w-32 h-60 -top-8 -left-6 absolute bg-slate-50 z-50 flex justify-center items-center flex-col">
+            <nav
+              id="menu"
+              x-show="isOpen"
+              x-bind:class="{'active': isOpen}"
+              class="w-32 h-60 -top-4 -right-6 absolute bg-slate-50 z-50 flex justify-center items-center flex-col">
               <img
                 src="../img/settings.png"
                 alt=""
@@ -61,7 +68,7 @@
                 src="../img/logout.png"
                 alt=""
                 class="h-14 w-14 m-3" />
-            </div>
+            </nav>
           </div>
         </div>
         <!-- input -->
@@ -75,7 +82,7 @@
             <div class="my-5">
               <input
                 type="text"
-                class="w-52 h-12 rounded-xl opacity-50" />
+                class="w-52 h-12 font-bold text-2xl tracking-[0.1em] rounded-xl opacity-50 outline-none px-4" />
             </div>
           </div>
           <div class="flex flex-col justify-center items-center w-56">
@@ -87,7 +94,7 @@
             <div class="my-5">
               <input
                 type="text"
-                class="w-52 h-12 rounded-xl opacity-50" />
+                class="w-52 h-12 font-bold text-2xl tracking-[0.1em] rounded-xl opacity-50 outline-none px-4" />
             </div>
           </div>
         </div>
