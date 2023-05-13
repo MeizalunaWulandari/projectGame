@@ -45,6 +45,7 @@
             <button
               x-on:click="isOpen = !isOpen"
               @click.outside="isOpen = false"
+              x-show="isOpen"
               class="">
               <img
                 src="../img/more.png"
@@ -54,21 +55,26 @@
             <!-- nav hamburger -->
             <nav
               id="menu"
-              x-show="isOpen"
               x-bind:class="{'active': isOpen}"
-              class="w-32 h-60 -top-4 -right-6 absolute bg-slate-50 z-50 flex justify-center items-center flex-col">
-              <img
-                src="../img/settings.png"
-                alt=""
-                class="h-14 w-14 m-3" />
-              <img
-                src="../img/info.png"
-                alt=""
-                class="h-14 w-14 m-3" />
-              <img
-                src="../img/logout.png"
-                alt=""
-                class="h-14 w-14 m-3" />
+              class="w-32 h-60 -top-4 -right-6 absolute z-50 flex justify-center items-center flex-col">
+              <button class="">
+                <img
+                  src="../img/settings.png"
+                  alt=""
+                  class="h-14 w-14 m-3" />
+              </button>
+              <button class="">
+                <img
+                  src="../img/info.png"
+                  alt=""
+                  class="h-14 w-14 m-3" />
+              </button>
+              <button>
+                <img
+                  src="../img/logout.png"
+                  alt=""
+                  class="h-14 w-14 m-3" />
+              </button>
             </nav>
           </div>
         </div>
