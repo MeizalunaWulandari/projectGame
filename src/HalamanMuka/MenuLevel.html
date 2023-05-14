@@ -19,7 +19,14 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Chicle&family=Instrument+Serif&display=swap"
       rel="stylesheet" />
+    <!-- fontawesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
     <!-- alpine -->
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -34,42 +41,55 @@
     <!-- this body -->
     <!-- this body -->
     <!-- this body -->
-    <section class="w-screen h-screen flex flex-col justify-center items-center">
+    <section
+      x-data="{isLevelLockOpen: false}"
+      class="w-screen h-screen flex flex-col justify-center items-center">
       <div class="h-[810px] w-[420px] bg-green-500 flex flex-col justify-center items-center gap-4 rounded-lg relative">
         <!-- start -->
 
+        <!-- overlay start -->
+        <div
+          x-show="isLevelLockOpen"
+          class="inset-0 bg-white/80 absolute z-50 flex flex-col gap-10 items-center justify-center">
+          <p class="text-5xl font-utama text-center px-3">Ups, kamu harus menyelesaikan dulu level sebelumnya</p>
+          <button
+            @click="isLevelLockOpen = false"
+            class="w-20 h-14 bg-red-500 rounded-full text-3xl font-utama">
+            Okay
+          </button>
+        </div>
+        <!-- overlay end -->
+
         <!-- input -->
         <div class="w-full flex flex-col justify-center items-center">
-          <button class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8">
+          <button
+            x-on:click="window.location.href = 'level1.html'"
+            class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8">
             <p class="text-black">Level 1</p>
           </button>
-          <button class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
+          <button
+            @click="isLevelLockOpen = true"
+            class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
             <p class="text-black">Level 2</p>
-            <img
-              src="../img/padlock.png"
-              alt="gembok"
-              class="w-12 h-12" />
+            <i class="fa-solid fa-lock w-12 h-12"></i>
           </button>
-          <button class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
+          <button
+            @click="isLevelLockOpen = true"
+            class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
             <p class="text-black">Level 3</p>
-            <img
-              src="../img/padlock.png"
-              alt="gembok"
-              class="w-12 h-12" />
+            <i class="fa-solid fa-lock w-12 h-12"></i>
           </button>
-          <button class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
+          <button
+            @click="isLevelLockOpen = true"
+            class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
             <p class="text-black">Level 4</p>
-            <img
-              src="../img/padlock.png"
-              alt="gembok"
-              class="w-12 h-12" />
+            <i class="fa-solid fa-lock w-12 h-12"></i>
           </button>
-          <button class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
+          <button
+            @click="isLevelLockOpen = true"
+            class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
             <p class="text-black">Level 5</p>
-            <img
-              src="../img/padlock.png"
-              alt="gembok"
-              class="w-12 h-12" />
+            <i class="fa-solid fa-lock w-12 h-12"></i>
           </button>
         </div>
       </div>
