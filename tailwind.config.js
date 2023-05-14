@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/HalamanMuka/**/*.html"],
+  content: ["./src/**/*.html"],
   theme: {
     extend: {
       fontFamily: {
