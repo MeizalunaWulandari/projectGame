@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         utama: ["Chicle"],
       },
+      backgroundImage: {
+        taman: "url('/src/img/taman.png')",
+      },
     },
   },
   plugins: [],
